@@ -3,12 +3,12 @@ parameters:
     database_host: localhost
     database_port: null
     database_name: newproj
-    database_user: root
-    database_password: x
+    database_user: user
+    database_password: null
     mailer_transport: smtp
     mailer_host: localhost
     mailer_user: null
     mailer_password: null
     locale: en
-    secret: 319f47e673d233454667aab4eac9bdda
+    secret: ThisTokenIsNotSoSecretChangeIt
     database_path: null
