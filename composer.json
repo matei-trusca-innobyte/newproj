@@ -21,7 +21,8 @@
         "stof/doctrine-extensions-bundle": "dev-master",
         "sonata-project/admin-bundle": "2.1.*",
         "sonata-project/page-bundle": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "*"
+        "sonata-project/doctrine-orm-admin-bundle": "*",
+        "doctrine/doctrine-fixtures-bundle": "2.1.*"
     },
     "scripts": {
         "post-install-cmd": [
