@@ -21,7 +21,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/create")
-     * @Template("EcmaStoreBundle:Default:index.html.twig")
+     * @Template()
      */
     public function createAction()
     {
@@ -34,7 +34,25 @@ class DefaultController extends Controller
         $em->persist($product);
         $em->flush();
 
-        return array('name' => 'Created product id '.$product->getId());
+        return array('id' => $product->getId());
+    }
+
+    /**
+     * @Route("/show/{id}")
+     * @Template()
+     */
+    public function showAction($id)
+    {
+        $product = $this->getDoctrine()
+            ->getRepository('EcmaStoreBundle:Product')
+            ->find($id);
+
+        if (!$product) {
+            throw $this->createNotFoundException('No product found for id '.$id);
+        }
+
+        // ... do something, like pass the $product object into a template
+        return array('product' => $product);
     }
 
 }
